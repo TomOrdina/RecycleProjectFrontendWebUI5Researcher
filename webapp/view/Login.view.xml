@@ -8,7 +8,7 @@ xmlns="sap.m">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" showHeader="false" class="sapUiResponsivePadding">
+				<Page id="page" title="{i18n>title}" class="sapUiResponsivePadding">
 				<l:VerticalLayout width="100%" class="sapUiResponsiveContentPadding">
 				<FlexBox
 					alignItems="Start"
@@ -16,9 +16,9 @@ xmlns="sap.m">
 					direction="Column">
 						<items>
 								<l:HorizontalLayout>
-										<Image src="images/loginPic.jpg" alt="pictureBanner" width="100vw" class=""></Image>
+									<Image src="images/loginPic.jpg" alt="pictureBanner" width="100vw" class=""></Image>
 								</l:HorizontalLayout>
-								<Text text="{i18n>LoginWelcome}" class="fontPara fontH1 sapUiSmallMargin "/>
+								<Text text="{i18n>LoginWelcome}" class="fontPara sapUiSmallMargin"/>
 								<Text text="{i18n>PleaseLogin}" class="fontPara sapUiSmallMargin"/>
 						</items>
 				</FlexBox>
@@ -30,18 +30,18 @@ xmlns="sap.m">
 						     <Input id="pasw" placeholder="Password" type="Password" width="80vw"></Input>
 						     <Button width="12rem" text="Login" type="Emphasized" press="onLogin" class="sapUiContentPadding"></Button>
 						    </items>
-						 </VBox>
+						   </VBox>
 						   <FlexBox
 								alignItems="End"
 								justifyContent="End"
 								direction="Column"
-								class="sapUiMediumMargin">
+								class="sapUiSmallMargin">
 						   		<Link href="#" target="#" text="{i18n>forgotPass}" class="sapUiSmallMarginBottom underline fontSize"/>
 						   		<Link href="#" target="#" text="{i18n>register}" class="sapUiSmallMarginBottom underline fontSize"/>
 						   </FlexBox>
 						   <VBox alignItems="Center" justifyContent="Center">
 								<Text text="{i18n>footer}" class="fontPara sapUiSmallMargin"/>
-								<Link href="https://zeroplasticrivers.com/" target="_blank" text="{i18n>footerLink}"/>
+								<Link href="https://zeroplasticrivers.com/" target="_blank" text="{i18n>footerLink}" class="sapUiSmallMargin"/>
 							</VBox>
 					</content>
 				</Page>

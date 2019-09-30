@@ -6,6 +6,10 @@ sap.ui.define([
 	return Controller.extend("ResearcherApp.RecycleFrontEndResearcherApp.controller.Profile", {
 		onInit: function () {
 
+		},
+		
+		onPress: function () {
+			console.log("working");
 		}
 	});
 });
