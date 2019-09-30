@@ -1,0 +1,36 @@
+<mvc:View
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<App>
+			<Page>
+
+				<footer>
+					<Toolbar height="10vh" >
+						<IconTabBar id="idIconTabBarMulti" class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter
+								icon="sap-icon://menu">
+							</IconTabFilter>
+							<IconTabFilter
+								icon="sap-icon://list">
+							</IconTabFilter>
+							<IconTabFilter
+								icon="sap-icon://alert">
+							</IconTabFilter>
+							<IconTabFilter
+								icon="sap-icon://sort">
+							</IconTabFilter>
+							<IconTabFilter
+								icon="sap-icon://person-placeholder">
+						</IconTabFilter>
+						</items>
+					</IconTabBar>
+					</Toolbar>
+				</footer>
+		</Page>
+	</App>
+	
+
+	
+</mvc:View>

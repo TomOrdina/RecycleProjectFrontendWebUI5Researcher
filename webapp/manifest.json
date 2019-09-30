@@ -79,6 +79,11 @@
 				"name": "RouteLogin",
 				"pattern": "RouteLogin",
 				"target": ["TargetLogin"]
+				},
+				{
+					"name": "RouteProfile",
+					"pattern": "RouteProfile",
+					"target": ["TargetProfile"]
 			}],
 			"targets": {
 				"TargetLogin": {
@@ -87,7 +92,12 @@
 					"clearControlAggregation": false,
 					"viewId": "Login",
 					"viewName": "Login"
-				}
+				},
+					"TargetProfile": {
+						"viewType": "XML",
+						"viewId": "Profile",
+						"viewName": "Profile"
+					}
 			}
 		}
 	}

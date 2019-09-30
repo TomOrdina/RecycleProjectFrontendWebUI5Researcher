@@ -30,12 +30,12 @@ xmlns="sap.m">
 						     <Input id="pasw" placeholder="Password" type="Password" width="80vw"></Input>
 						     <Button width="12rem" text="Login" type="Emphasized" press="onLogin" class="sapUiContentPadding"></Button>
 						    </items>
-						   </VBox>
+						 </VBox>
 						   <FlexBox
 								alignItems="End"
 								justifyContent="End"
 								direction="Column"
-								class="sapUiSmallMargin">
+								class="sapUiMediumMargin">
 						   		<Link href="#" target="#" text="{i18n>forgotPass}" class="sapUiSmallMarginBottom underline fontSize"/>
 						   		<Link href="#" target="#" text="{i18n>register}" class="sapUiSmallMarginBottom underline fontSize"/>
 						   </FlexBox>
