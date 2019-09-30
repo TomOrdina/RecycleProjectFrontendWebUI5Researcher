@@ -1,0 +1,50 @@
+<mvc:View 
+controllerName="ResearcherApp.RecycleFrontEndResearcherApp.controller.Logout" 
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:l="sap.ui.layout"
+displayBlock="true"
+xmlns="sap.m">
+	
+		<App id="app">
+			<pages>
+				<Page id="page" showHeader="false" class="sapUiResponsivePadding">
+				<l:VerticalLayout width="100%" class="sapUiResponsiveContentPadding">
+				<FlexBox
+					alignItems="Start"
+					justifyContent="Start"
+					direction="Column">
+						<items>
+								<l:HorizontalLayout>
+										<Image src="images/loginPic.jpg" alt="pictureBanner" width="100vw" class=""></Image>
+								</l:HorizontalLayout>
+								<Text text="{i18n>logOutText}" class="fontPara fontH1 sapUiSmallMargin "/>
+								<Text text="{i18n>returnLogin}" class="fontPara sapUiSmallMargin "/>
+						</items>
+				</FlexBox>
+				</l:VerticalLayout>
+					<content>
+						 <VBox justifyContent="Center" alignItems="Center" alignContent="Center" class="sapUiMediumMargin">
+						    <items>
+						     <Input id="uid" placeholder="User ID" width="80vw"></Input>
+						     <Input id="pasw" placeholder="Password" type="Password" width="80vw"></Input>
+						     <Button width="12rem" text="Login" type="Emphasized" press="onLogin" class="sapUiContentPadding"></Button>
+						    </items>
+						   </VBox>
+						   <FlexBox
+								alignItems="End"
+								justifyContent="End"
+								direction="Column"
+								class="sapUiSmallMargin">
+						   		<Link href="#" target="#" text="{i18n>forgotPass}" class="sapUiSmallMarginBottom underline fontSize"/>
+						   		<Link href="#" target="#" text="{i18n>register}" class="sapUiSmallMarginBottom underline fontSize"/>
+						   </FlexBox>
+						   <VBox alignItems="Center" justifyContent="Center">
+								<Text text="{i18n>footer}" class="fontPara sapUiSmallMargin"/>
+								<Link href="https://zeroplasticrivers.com/" target="_blank" text="{i18n>footerLink}"/>
+							</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+
+</mvc:View>

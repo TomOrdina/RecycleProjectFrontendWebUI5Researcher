@@ -9,3 +9,9 @@
 .fontSize {
 	font-size: 4vw;
 }
+
+.fontH1 {
+	font-size: 8vw;
+	color: darkblue;
+	font-weight: bold;
+}
