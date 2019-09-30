@@ -8,7 +8,7 @@ xmlns="sap.m">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="{i18n>title}" class="sapUiResponsivePadding">
+				<Page id="page" showHeader="false" class="sapUiResponsivePadding">
 				<l:VerticalLayout width="100%" class="sapUiResponsiveContentPadding">
 				<FlexBox
 					alignItems="Start"
