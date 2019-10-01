@@ -84,10 +84,38 @@
 					]
 				},
 				{
+					"name": "RouteOverview",
+					"pattern": "RouteOverview",
+					"target": [
+						"Overview"
+					]
+				},
+				{
+					"name": "RouteItems",
+					"pattern": "RouteItems",
+					"target": [
+						"Items"
+					]
+				},
+				{
+					"name": "RouteAlerts",
+					"pattern": "RouteAlerts",
+					"target": [
+						"Alerts"
+					]
+				},
+				{
+					"name": "RouteExport",
+					"pattern": "RouteExport",
+					"target": [
+						"Export"
+					]
+				},
+				{
 					"name": "RouteProfile",
 					"pattern": "RouteProfile",
 					"target": [
-						"TargetProfile"
+						"Profile"
 					]
 				}
 			],
@@ -99,7 +127,7 @@
 					"viewId": "Login",
 					"viewName": "Login"
 				},
-				"TargetProfile": {
+				"Profile": {
 					"viewType": "XML",
 					"viewId": "Profile",
 					"viewName": "Profile"
@@ -107,6 +135,22 @@
 				"Footer": {
 					"viewType": "XML",
 					"viewName": "Footer"
+				},
+				"Overview": {
+					"viewType": "XML",
+					"viewName": "Overview"
+				},
+				"Items": {
+					"viewType": "XML",
+					"viewName": "Items"
+				},
+				"Alerts": {
+					"viewType": "XML",
+					"viewName": "Alerts"
+				},
+				"Export": {
+					"viewType": "XML",
+					"viewName": "Export"
 				}
 			}
 		}

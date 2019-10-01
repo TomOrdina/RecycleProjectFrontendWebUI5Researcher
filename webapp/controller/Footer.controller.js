@@ -17,22 +17,22 @@ sap.ui.define([
 		
 		onPressOverview: function () {
 			var oRouter = UIComponent.getRouterFor(this);
-			oRouter.navTo("Route");
+			oRouter.navTo("RouteOverview");
 		},
 		
 		onPressItems: function () {
 			var oRouter = UIComponent.getRouterFor(this);
-			oRouter.navTo("Route");
+			oRouter.navTo("RouteItems");
 		},
 		
 		onPressAlerts  : function () {
 			var oRouter = UIComponent.getRouterFor(this);
-			oRouter.navTo("Route");
+			oRouter.navTo("RouteAlerts");
 		},
 		
 		onPressExport: function () {
 			var oRouter = UIComponent.getRouterFor(this);
-			oRouter.navTo("Route");
+			oRouter.navTo("RouteExport");
 		},
 		
 		onPressProfile: function () {
