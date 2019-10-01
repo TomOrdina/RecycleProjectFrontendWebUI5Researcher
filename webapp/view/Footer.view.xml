@@ -1,0 +1,41 @@
+<mvc:View
+	controllerName="ResearcherApp.RecycleFrontEndResearcherApp.controller.Footer"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	
+	<Page id="floatingFooterPage" showHeader="false" floatingFooter="false">
+		<footer class="footer">
+			<Toolbar class="footer try">
+				<ToolbarSpacer/>
+					<Button 
+						class="menuButton myOverview"
+						icon="sap-icon://menu"
+						text="Overview"
+						press=".onPressOverview"/>
+					<Button 
+						class="menuButton myItems"
+						icon="sap-icon://list"
+						text="Items"
+						press=".onPressItems"/>
+					<Button 
+						class="menuButton myAlert"
+						icon="sap-icon://alert"
+						text="Alerts"
+						press=".onPressAlerts"/>
+					<Button 
+						class="menuButton mySort"
+						icon="sap-icon://sort"
+						text="Export"
+						press=".onPressExport"/>
+					<Button 
+						class="menuButton myPlaceholder" 
+						icon="sap-icon://person-placeholder"
+						text="Profile"
+						press=".onPressProfile"/>
+				<ToolbarSpacer/>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>
