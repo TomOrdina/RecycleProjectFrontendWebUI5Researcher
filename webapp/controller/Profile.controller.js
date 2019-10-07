@@ -7,7 +7,10 @@ sap.ui.define([
 		onInit: function () {
 
 		},
-		
+		onBeforeRendering: function () {
+			var oModel = this.getView().getModel("data");
+			this.getView().setModel(oModel);
+		},
 		onPress: function () {
 			console.log("working");
 		}

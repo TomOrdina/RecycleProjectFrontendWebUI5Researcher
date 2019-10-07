@@ -1,5 +1,5 @@
-<mvc:View
-	controllerName="ResearcherApp.RecycleFrontEndResearcherApp.controller.Items"
+<mvc:View 
+	controllerName="ResearcherApp.RecycleFrontEndResearcherApp.controller.Release"
 	xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
@@ -9,11 +9,11 @@
 		
 		<Text text="items" class="sapUiSmallMargin header"/>
 		<FlexBox
-		height="75vh"
-		justifyContent="End"
+		justifyContent="Center"
 		alignItems="Center"
 		direction="Column">
-			<Button text="{i18n>releaseButton}" width="80vw" press=".onPress"/>
+			<Select id="mySelect" width="80vw"/>
+			<Button text="{i18n>releaseButton}" width="80vw" press=".onPressRelease"/>
 		</FlexBox>
 	</Page>
 	<mvc:XMLView viewName="ResearcherApp.RecycleFrontEndResearcherApp.view.Footer"/>

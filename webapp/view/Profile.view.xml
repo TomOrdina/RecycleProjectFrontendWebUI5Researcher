@@ -13,15 +13,16 @@
 				<VBox class="card sapUiSmallMarginBottom">
 					<items>
 						<Text class="title" text="{i18n>nameProfile}"/>
-						<Text class="content" text="{i18n>nameProfileValue}"/>
+						<Text class="content" binding="{/user}" text="{name}"/>
 						<Text class="title" text="{i18n>roleProfile}"/>
-						<Text class="content" text="{i18n>roleProfileValue}"/>
+						<Text class="content" binding="{/user}" text="{role}"/>
 						<Text class="title" text="{i18n>permissionProfile}"/>
-						<Text class="content" text="{i18n>permissionProfileValue}"/>
+						<Text class="content" binding="{/user}" text="{permission}"/>
 					</items>
 				</VBox>
-				<Button text="{i18n>profileButton}" width="80vw"/>
-				<Link text="{i18n>profileChangePass}" class="sapUiSmallMarginTop underline"/>
+				<Button icon="sap-icon://edit" text="{i18n>profileButton}" width="80vw"/>
+				<Link text="{i18n>profileChangePass}" class="sapUiMediumMargin underline"/>
+				<Button type="Reject" icon="sap-icon://log" text="{i18n>profileButtonLogout}" width="80vw"/>
 			</items>
 		</VBox>	
 	</Page>

@@ -4,7 +4,35 @@
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core">
 	<Page id="floatingFooterPage" showHeader="false" floatingFooter="false">
-		<Text text="Overview"/>
+		<Text text="Overview" class="sapUiSmallMargin header"/>
+		<HBox class="testtest">
+			<!--mss proberen met een table?-->
+			<List
+			headerText="Time"
+			items="{
+				path: '/items'
+			}" >
+			<StandardListItem
+				title="{time}"/>
+			</List>
+			<List
+			headerText="Id"
+			items="{
+				path: '/items'
+			}" >
+			<StandardListItem
+				title="{itemID}"/>
+			</List>
+			<List
+			headerText="Status"
+			items="{
+				path: '/items'
+			}" >
+			<StandardListItem
+				title="{status}"
+				type="Navigation"/>
+			</List>
+		</HBox>
 	</Page>
 	<mvc:XMLView viewName="ResearcherApp.RecycleFrontEndResearcherApp.view.Footer"/>
 </mvc:View>

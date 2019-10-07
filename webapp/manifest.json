@@ -56,6 +56,10 @@
 				"settings": {
 					"bundleName": "ResearcherApp.RecycleFrontEndResearcherApp.i18n.i18n"
 				}
+			},
+			"data": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/data.json"
 			}
 		},
 		"resources": {
@@ -117,6 +121,13 @@
 					"target": [
 						"Profile"
 					]
+				},
+				{
+					"name": "RouteItemRelease",
+					"pattern": "RouteItemRelease",
+					"target": [
+						"Release"
+					]
 				}
 			],
 			"targets": {
@@ -151,6 +162,10 @@
 				"Export": {
 					"viewType": "XML",
 					"viewName": "Export"
+				},
+				"Release": {
+					"viewType": "XML",
+					"viewName": "Release"
 				}
 			}
 		}
