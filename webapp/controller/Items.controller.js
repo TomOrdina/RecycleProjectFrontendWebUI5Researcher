@@ -11,6 +11,9 @@ sap.ui.define([
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 		 * @memberOf ResearcherApp.RecycleFrontEndResearcherApp.view.Items
 		 */
+		 
+		 // make sure all items sum is displayed => backend provides or we count in frontend, put it in model and display
+		 // same with total released amount of items
 		onInit: function () {
 
 		},

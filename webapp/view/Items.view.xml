@@ -7,7 +7,7 @@
 	
 	<Page id="floatingFooterPage" showHeader="false" floatingFooter="false">
 		
-		<Text text="items" class="sapUiSmallMargin header"/>
+		<Text text="{i18n>itemsHeader}" class="sapUiSmallMargin header"/>
 		<FlexBox
 		height="75vh"
 		justifyContent="End"

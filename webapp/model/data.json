@@ -163,6 +163,8 @@
 	"user" : {
 		"name" : "Eduard",
 		"role" : "Researcher123",
-		"permission" : "Yes123"
-	} 
+		"permission" : "Yes123",
+		"test" : [1,2,1,1,1,1,4
+		]
+	}
 }

@@ -18,6 +18,8 @@
 						<Text class="content" binding="{/user}" text="{role}"/>
 						<Text class="title" text="{i18n>permissionProfile}"/>
 						<Text class="content" binding="{/user}" text="{permission}"/>
+
+						
 					</items>
 				</VBox>
 				<Button icon="sap-icon://edit" text="{i18n>profileButton}" width="80vw"/>
