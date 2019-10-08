@@ -1,0 +1,31 @@
+
+{
+				"Item": [{
+					"correlationAssetId": "",
+					"active": "",
+					"type": {
+						"Type_name": "",
+						"ColorCode": "",
+						"batteryLevel": "",
+						"wakeUpTime": "",
+						"hibernate": ""
+					},
+					"status": "",
+					"locations": [{
+						"id": "",
+						"latitude": "",
+						"longitude": "",
+						"timestamp": ""
+					}],
+					"FirstWaterEntered": ""
+				}],
+				"User": [{
+					"UID": "",
+					"Gebruikersnaam": "",
+					"Wachtwoord": "",
+					"Achternaam": "",
+					"Voornaam": "",
+					"Export": "",
+					"Role": ""
+				}]
+			}
