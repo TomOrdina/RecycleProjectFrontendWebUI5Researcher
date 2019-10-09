@@ -1,0 +1,205 @@
+{
+	"Item": [{
+		"correlationAssetId": "ded5833c-947c-48a3-920f-88a8c6743a29",
+		"active": true,
+		"type": {
+			"Type_name": "sensor",
+			"ColorCode": "new",
+			"batteryLevel": 15,
+			"wakeUpTime": 15000,
+			"hibernate": false
+		},
+		"status": "UNCONNECTED",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 1.23,
+			"longitude": 4.57,
+			"timestamp": "2019-10-11T01:59:00Z"
+		}],
+		"FirstWaterEntered": "2019-02-15T10:30:00Z"
+	}, {
+		"correlationAssetId": "2",
+		"active": true,
+		"type": {
+			"Type_name": "bottle",
+			"physicalId": "B-154-III"
+
+		},
+		"status": "CONNECTED",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 8.91,
+			"longitude": 1.13,
+			"timestamp": "2014-04-01T16:24:11Z"
+		}],
+		"FirstWaterEntered": "2018-10-30T12:00:00Z"
+	}, {
+		"correlationAssetId": "2163415435241",
+		"active": true,
+		"type": {
+			"Type_name": "acoustic"
+
+		},
+		"status": "UNCONNECTED",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 126454.12,
+			"longitude": 12244.34,
+			"timestamp": "2010-02-10T09:35:54Z"
+		}],
+		"FirstWaterEntered": "2000-12-15T20:00:00Z"
+	},{
+		"correlationAssetId": "ded5833c-947c-48a3-920f-88a8c6743a29",
+		"active": true,
+		"type": {
+			"Type_name": "sensor",
+			"ColorCode": "new",
+			"batteryLevel": 15,
+			"wakeUpTime": 15000,
+			"hibernate": false
+		},
+		"status": "UNCONNECTED",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 1.23,
+			"longitude": 4.57,
+			"timestamp": "2019-10-11T01:59:00Z"
+		}],
+		"FirstWaterEntered": "2019-02-15T10:30:00Z"
+	},{
+		"correlationAssetId": "ded5833c-947c-48a3-920f-88a8c6743a29",
+		"active": true,
+		"type": {
+			"Type_name": "sensor",
+			"ColorCode": "new",
+			"batteryLevel": 15,
+			"wakeUpTime": 15000,
+			"hibernate": false
+		},
+		"status": "UNCONNECTED",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 1.23,
+			"longitude": 4.57,
+			"timestamp": "2019-10-11T01:59:00Z"
+		}],
+		"FirstWaterEntered": "2019-02-15T10:30:00Z"
+	},{
+		"correlationAssetId": "ded5833c-947c-48a3-920f-88a8c6743a29",
+		"active": true,
+		"type": {
+			"Type_name": "sensor",
+			"ColorCode": "new",
+			"batteryLevel": 15,
+			"wakeUpTime": 15000,
+			"hibernate": false
+		},
+		"status": "UNCONNECTED",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 1.23,
+			"longitude": 4.57,
+			"timestamp": "2019-10-11T01:59:00Z"
+		}],
+		"FirstWaterEntered": "2019-02-15T10:30:00Z"
+	},{
+		"correlationAssetId": "ded5833c-947c-48a3-920f-88a8c6743a29",
+		"active": true,
+		"type": {
+			"Type_name": "sensor",
+			"ColorCode": "new",
+			"batteryLevel": 15,
+			"wakeUpTime": 15000,
+			"hibernate": false
+		},
+		"status": "UNCONNECTED",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 1.23,
+			"longitude": 4.57,
+			"timestamp": "2019-10-11T01:59:00Z"
+		}],
+		"FirstWaterEntered": "2019-02-15T10:30:00Z"
+	},{
+		"correlationAssetId": "ded5833c-947c-48a3-920f-88a8c6743a29",
+		"active": true,
+		"type": {
+			"Type_name": "sensor",
+			"ColorCode": "new",
+			"batteryLevel": 15,
+			"wakeUpTime": 15000,
+			"hibernate": false
+		},
+		"status": "UNCONNECTED",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 1.23,
+			"longitude": 4.57,
+			"timestamp": "2019-10-11T01:59:00Z"
+		}],
+		"FirstWaterEntered": "2019-02-15T10:30:00Z"
+	},{
+		"correlationAssetId": "ded5833c-947c-48a3-920f-88a8c6743a29",
+		"active": true,
+		"type": {
+			"Type_name": "sensor",
+			"ColorCode": "new",
+			"batteryLevel": 15,
+			"wakeUpTime": 15000,
+			"hibernate": false
+		},
+		"status": "UNCONNECTED",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 1.23,
+			"longitude": 4.57,
+			"timestamp": "2019-10-11T01:59:00Z"
+		}],
+		"FirstWaterEntered": "2019-02-15T10:30:00Z"
+	},{
+		"correlationAssetId": "ded5833c-947c-48a3-920f-88a8c6743a29",
+		"active": true,
+		"type": {
+			"Type_name": "sensor",
+			"ColorCode": "new",
+			"batteryLevel": 15,
+			"wakeUpTime": 15000,
+			"hibernate": false
+		},
+		"status": "UNCONNECTED",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 1.23,
+			"longitude": 4.57,
+			"timestamp": "2019-10-11T01:59:00Z"
+		}],
+		"FirstWaterEntered": "2019-02-15T10:30:00Z"
+	},{
+		"correlationAssetId": "ded5833c-947c-48a3-920f-88a8c6743a29",
+		"active": true,
+		"type": {
+			"Type_name": "sensor",
+			"ColorCode": "new",
+			"batteryLevel": 15,
+			"wakeUpTime": 15000,
+			"hibernate": false
+		},
+		"status": "UNCONNECTED",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 1.23,
+			"longitude": 4.57,
+			"timestamp": "2019-10-11T01:59:00Z"
+		}],
+		"FirstWaterEntered": "2019-02-15T10:30:00Z"
+	}],
+	"User": [{
+		"UID": 1543413246153223124,
+		"Gebruikersnaam": "Jos",
+		"Wachtwoord": "f2ca1bb6c7e907d06dafe4687e579fce76b37e4e93b7605022da52e6ccc26fd2",
+		"Achternaam": "Deprez",
+		"Voornaam": "Jos",
+		"Export": true,
+		"Role": "Researcher"
+	}]
+}

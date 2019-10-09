@@ -4,10 +4,70 @@
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core">
 	<Page id="floatingFooterPage" showHeader="false" floatingFooter="false">
-		<Text text="{i18n>overviewHeader}" class="sapUiSmallMargin header"/>
-		<HBox class="testtest">
-		
-		</HBox>
+		<Text text="Overview" class="sapUiSmallMargin header"/>
+		<Text id="test" text=""/>
+		<VBox alignContent="Start" justifyContent="Center" alignItems="Center" height="65vh" class="testtest">
+							<items>
+									<Table id="testtabel" items="{path: '/Item'}"  itemPress="generalData">
+										<columns>
+											<Column>
+												<Label text="Time"></Label>
+											</Column>
+											<Column>
+												<Label text="Item ID"></Label>
+											</Column>
+											<Column>
+												<Label text="status"></Label>
+											</Column>
+											<Column visible="hidden">
+												<Label text="active"></Label>
+											</Column>
+											<Column visible="hidden">
+												<Label text="Type name"></Label>
+											</Column>
+											<Column visible="hidden">
+												<Label text="FirstWaterEntered"></Label>
+											</Column>
+											<Column visible="hidden">
+												<Label text="longitude"></Label>
+											</Column>
+											<Column visible="hidden">
+												<Label text="latitude"></Label>
+											</Column>
+											<Column visible="hidden">
+												<Label text="battery level"></Label>
+											</Column>
+											<Column visible="hidden">
+												<Label text="wakeuptime"></Label>
+											</Column>
+											<Column visible="hidden">
+												<Label text="hibernate"></Label>
+											</Column>
+											<Column visible="hidden">
+												<Label text="physicalID"></Label>
+											</Column>
+											
+											
+										</columns>
+										<ColumnListItem type="Active">
+											<Text text="{locations/0/timestamp}"></Text>
+											<Text text="{correlationAssetId}"></Text>
+											<Text text="{status}"></Text>
+											<Text text="{active}"></Text>
+											<Text text="{type/Type_name}" ></Text>
+											<Text text="{FirstWaterEntered}"></Text>
+											<Text text="{locations/0/longitude}" ></Text>
+											<Text text="{locations/0/latitude}" ></Text>
+											<Text text="{type/batteryLevel}" ></Text>
+											<Text text="{type/wakeUpTime}" ></Text>
+											<Text text="{type/hibernate}" ></Text>
+											<Text text="{type/physicalId}" ></Text>
+										</ColumnListItem>
+									</Table>
+
+							</items>
+						</VBox>
 	</Page>
 	<mvc:XMLView viewName="ResearcherApp.RecycleFrontEndResearcherApp.view.Footer"/>
+
 </mvc:View>

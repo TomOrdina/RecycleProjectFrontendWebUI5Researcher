@@ -60,14 +60,20 @@
 			"data": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/data.json"
+			},
+			"data2": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/data2.json"
+			},
+			"modeltest": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/modeltest.json"
 			}
 		},
 		"resources": {
-			"css": [
-				{
-					"uri": "css/style.css"
-				}
-			]
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		},
 		"routing": {
 			"config": {
@@ -79,57 +85,47 @@
 				"controlId": "app",
 				"clearControlAggregation": false
 			},
-			"routes": [
-				{
-					"name": "RouteLogin",
-					"pattern": "RouteLogin",
-					"target": [
-						"TargetLogin"
-					]
-				},
-				{
-					"name": "RouteOverview",
-					"pattern": "RouteOverview",
-					"target": [
-						"Overview"
-					]
-				},
-				{
-					"name": "RouteItems",
-					"pattern": "RouteItems",
-					"target": [
-						"Items"
-					]
-				},
-				{
-					"name": "RouteAlerts",
-					"pattern": "RouteAlerts",
-					"target": [
-						"Alerts"
-					]
-				},
-				{
-					"name": "RouteExport",
-					"pattern": "RouteExport",
-					"target": [
-						"Export"
-					]
-				},
-				{
-					"name": "RouteProfile",
-					"pattern": "RouteProfile",
-					"target": [
-						"Profile"
-					]
-				},
-				{
-					"name": "RouteItemRelease",
-					"pattern": "RouteItemRelease",
-					"target": [
-						"Release"
-					]
-				}
-			],
+			"routes": [{
+				"name": "RouteLogin",
+				"pattern": "RouteLogin",
+				"target": ["TargetLogin"]
+			}, {
+				"name": "RouteOverview",
+				"pattern": "RouteOverview",
+				"target": ["Overview"]
+			}, {
+				"name": "RouteItems",
+				"pattern": "RouteItems",
+				"target": ["Items"]
+			}, {
+				"name": "RouteAlerts",
+				"pattern": "RouteAlerts",
+				"target": ["Alerts"]
+			}, {
+				"name": "RouteExport",
+				"pattern": "RouteExport",
+				"target": ["Export"]
+			}, {
+				"name": "RouteProfile",
+				"pattern": "RouteProfile",
+				"target": ["Profile"]
+			}, {
+				"name": "RouteItemRelease",
+				"pattern": "RouteItemRelease",
+				"target": ["Release"]
+			}, {
+				"name": "RouteDetailSensor",
+				"pattern": "RouteDetailSensor",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["DetailPage-Sensor"]
+			}, {
+				"name": "RouteDetailItem",
+				"pattern": "RouteDetailItem",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["DetailPage-Item"]
+			}],
 			"targets": {
 				"TargetLogin": {
 					"viewType": "XML",
@@ -166,6 +162,14 @@
 				"Release": {
 					"viewType": "XML",
 					"viewName": "Release"
+				},
+				"DetailPage-Item": {
+					"viewType": "XML",
+					"viewName": "DetailPage-Item"
+				},
+				"DetailPage-Sensor": {
+					"viewType": "XML",
+					"viewName": "DetailPage-Sensor"
 				}
 			}
 		}
