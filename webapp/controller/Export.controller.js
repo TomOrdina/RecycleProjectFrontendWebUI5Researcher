@@ -1,6 +1,8 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/ui/core/util/Export",
+	"sap/ui/core/util/ExportTypeCSV"
+], function (Controller, Export, ExportTypeCSV) {
 	"use strict";
 
 	return Controller.extend("ResearcherApp.RecycleFrontEndResearcherApp.controller.Export", {
@@ -11,35 +13,48 @@ sap.ui.define([
 		 * @memberOf ResearcherApp.RecycleFrontEndResearcherApp.view.Export
 		 */
 		onInit: function () {
-
+			var oModel = new sap.ui.model.json.JSONModel("model/data.json");
+			sap.ui.getCore().setModel(oModel, "oModel");
 		},
 
-		/**
-		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
-		 * (NOT before the first rendering! onInit() is used for that one!).
-		 * @memberOf ResearcherApp.RecycleFrontEndResearcherApp.view.Export
-		 */
-		//	onBeforeRendering: function() {
-		//
-		//	},
+		onDataExport: sap.m.Table.prototype.exportData || function() {
 
-		/**
-		 * Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
-		 * This hook is the same one that SAPUI5 controls get after being rendered.
-		 * @memberOf ResearcherApp.RecycleFrontEndResearcherApp.view.Export
-		 */
-		//	onAfterRendering: function() {
-		//
-		//	},
+			var oModel = sap.ui.getCore().getModel("oModel");
+			var oExport = new Export({
 
-		/**
-		 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
-		 * @memberOf ResearcherApp.RecycleFrontEndResearcherApp.view.Export
-		 */
-		//	onExit: function() {
-		//
-		//	}
+				exportType: new ExportTypeCSV({
+					fileExtension: "csv",
+					separatorChar: ";"
+				}),
+				models: oModel,
 
+				rows: {
+					path: "/items"
+				},
+				columns: [{
+					name: "Recorded Time",
+					template: {
+						content: "{time}"
+					}
+				}, {
+					name: "Item ID",
+					template: {
+						content: "{itemID}"
+					}
+				}, {
+					name: "Item Status",
+					template: {
+						content: "{status}"
+					}
+				}]
+			});
+			
+			oExport.saveFile().catch(function(oError) {
+ 
+			}).then(function() {
+				oExport.destroy();
+			});
+		}
 	});
 
 });
