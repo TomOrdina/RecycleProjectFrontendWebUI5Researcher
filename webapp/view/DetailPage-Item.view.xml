@@ -4,7 +4,8 @@
 		<pages>
 			<Page title="Title">
 				<content><Label text="data:"></Label>
-					<Table id="specificItem" items="{path: '/Item'}" visible="hidden">
+					<!--dit is de tabel waar alle sensor data dat op de wireframes nodig is wordt in geplaatst (zonder locatie)-->
+				<Table id="specificItem" items="{path: '/Item'}" visible="hidden">
 						<columns>
 							<Column>
 								<Label text="Correlation Asset Id"></Label>
@@ -35,6 +36,8 @@
 							
 						</ColumnListItem>
 					</Table>
+					<!--dit is de tabel waar alle items(geen sensors) locaties dat op de wireframes nodig is wordt in geplaatst (in principe maar dit gaat elke keer wel maar een geven omdat. deze wordt opgelost van zodra de ajax calls hierbij worden gebruikt)-->
+						
 					<Table id="specificItemDetail" items="{path: '/Item'}">
 					<columns>
 					<Column>
@@ -51,7 +54,9 @@
 						</ColumnListItem>
 						</Table>
 						</content>
-			</Page>
+			</Page>	
+			<!--dit is de footer-->
+	<mvc:XMLView viewName="ResearcherApp.RecycleFrontEndResearcherApp.view.Footer"/>
 		</pages>
 	</App>
 </mvc:View>

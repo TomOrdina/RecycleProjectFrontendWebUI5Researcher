@@ -7,52 +7,54 @@ sap.ui.define([
 	return Controller.extend("ResearcherApp.RecycleFrontEndResearcherApp.controller.Overview", {
 
 		onInit: function () {
+				//Hier wordt alle data uit het model in geplaatst
 				var oTable = this.getView().byId("testtabel");
-			var oModel = new sap.ui.model.json.JSONModel();
-			oModel.loadData("model/data2.json");
-			oTable.setModel(oModel);
+				var oModel = new sap.ui.model.json.JSONModel();
+				oModel.loadData("model/data2.json");
+				oTable.setModel(oModel);
 		}, 
 		generalData: function (event) {
-			//general data 
-			//console.log(event.getParameters().listItem.mAggregations)
+			//Dit is de data gehaald uit een individueel item waar is op geklikt
+			//Deze wordt dan geplaatst in een ander model om vanuit dit model op een andere pagina de data terug uit te halen
 			var correlationAssetIdProperty = event.getParameters().listItem.mAggregations.cells[1].mProperties;
 			var correlationAssetId = correlationAssetIdProperty.text;
-			// console.log(correlationAssetId);
+			
 			var activeproperty = event.getParameters().listItem.mAggregations.cells[3].mProperties;
 			var active = activeproperty.text;
-			// console.log(active);
+			
 			var statusproperty = event.getParameters().listItem.mAggregations.cells[2].mProperties;
 			var status = statusproperty.text;
-			// console.log(status);
+			
 			var typeNameProperty = event.getParameters().listItem.mAggregations.cells[4].mProperties;
 			var typeName = typeNameProperty.text;
-			// console.log(Type_name);
+			
 			var FistWaterEnteredproperty = event.getParameters().listItem.mAggregations.cells[5].mProperties;
 			var FistWaterEntered = FistWaterEnteredproperty.text;
-			// console.log(FistWaterEntered);
+			
 			var physicalIdproperty = event.getParameters().listItem.mAggregations.cells[11].mProperties;
 			var physicalId = physicalIdproperty.text;
-			// console.log(physicalId);
+			
 			var latitudeproperty = event.getParameters().listItem.mAggregations.cells[7].mProperties;
 			var latitude = latitudeproperty.text;
-			// console.log(latitude);
+			
 			var longitudeproperty = event.getParameters().listItem.mAggregations.cells[6].mProperties;
 			var longitude = longitudeproperty.text;
-			// console.log(longitude);
+			
 			var timestampproperty = event.getParameters().listItem.mAggregations.cells[0].mProperties;
 			var timestamp = timestampproperty.text;
+			//Hierbij wordt de datum geherformatteerd zodat deze op de manier van de wireframes kan worden afgebeeld in de detail page
 			//var year = timestamp.substring(0,4);
 			var month = timestamp.substring(7,5);
 			var day = timestamp.substring(10,8);
 			var hour = timestamp.substring(13,11);
 			var minutes = timestamp.substring(16,14);
 			var time = hour+":"+minutes+"h "+day+"/"+month;
-			//get model from data.json file
+			//Hierbij wordt er gechecked of het item een sensor is, indien dit zo is gaat hij naar de sensor functie anders doet hij de else code
 			if(typeName == "sensor"){
 				this.sensor(event,latitude,longitude,time);
 			}else{
 			var oModel2 = this.getView().getModel("modeltest");
-			// Assign the model object to the SAPUI5 core
+			//Hierbij steekt hij de bovenstaande data van het individueel item in een ander model
 			oModel2.setData({
 				"Item": [{
 					"correlationAssetId": correlationAssetId,
@@ -84,26 +86,24 @@ sap.ui.define([
 					"Role": ""
 				}]
 			}, true);
-
 			sap.ui.getCore().setModel(oModel2);
+			//Hier wordt er geroute naar een andere pagina
 			var oRouter = UIComponent.getRouterFor(this);
 			oRouter.navTo("RouteDetailItem");
 			}
 		},
 		sensor: function (event,latitude,longitude,timestamp) {
 			//sensor
+			//Dit is de data gehaald uit een individueel item waar is op geklikt
+			//Deze wordt dan geplaatst in een ander model om vanuit dit model op een andere pagina de data terug uit te halen
 			var batteryLevelproperty = event.getParameters().listItem.mAggregations.cells[8].mProperties;
 			var batteryLevel = batteryLevelproperty.text;
-			// console.log(batteryLevel);
 			var wakeupTimeproperty = event.getParameters().listItem.mAggregations.cells[9].mProperties;
 			var wakeupTime = wakeupTimeproperty.text;
-			// console.log(wakeupTime);
 			var hibernateproperty = event.getParameters().listItem.mAggregations.cells[10].mProperties;
 			var hibernate = hibernateproperty.text;
-			// console.log(hibernate);
-			//get model from data.json file
 			var oModel2 = this.getView().getModel("modeltest");
-			// Assign the model object to the SAPUI5 core
+			//Hierbij steekt hij de bovenstaande data van het individueel item in een ander model
 			oModel2.setData({
 				"Item": [{
 					"correlationAssetId": "",

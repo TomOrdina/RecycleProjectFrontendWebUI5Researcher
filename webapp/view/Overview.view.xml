@@ -8,6 +8,7 @@
 		<Text id="test" text=""/>
 		<VBox alignContent="Start" justifyContent="Center" alignItems="Center" height="65vh" class="testtest">
 							<items>
+								<!--dit is de tabel waar alle data in wordt geplaatst-->
 									<Table id="testtabel" items="{path: '/Item'}"  itemPress="generalData">
 										<columns>
 											<Column>
@@ -68,6 +69,7 @@
 							</items>
 						</VBox>
 	</Page>
+	<!--dit is de footer-->
 	<mvc:XMLView viewName="ResearcherApp.RecycleFrontEndResearcherApp.view.Footer"/>
 
 </mvc:View>

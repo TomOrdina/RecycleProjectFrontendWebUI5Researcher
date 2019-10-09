@@ -3,7 +3,8 @@
 	<App>
 		<pages>
 			<Page title="Title">
-				<content>
+				<content>	
+				<!--dit is de tabel waar alle sensor data dat op de wireframes nodig is wordt in geplaatst (zonder locatie)-->
 					<Label text="data:"></Label>
 					<Table id="specificItem" items="{path: '/Item'}" visible="hidden">
 						<columns>
@@ -23,6 +24,8 @@
 							<Text text="{type/hibernate}"></Text>
 						</ColumnListItem>
 					</Table>
+						<!--dit is de tabel waar alle sensor locaties dat op de wireframes nodig is wordt in geplaatst (in principe maar dit gaat elke keer wel maar een geven omdat. deze wordt opgelost van zodra de ajax calls hierbij worden gebruikt)-->
+									
 					<Table id="specificItemDetail" items="{path: '/Item'}">
 						<columns>
 							<Column>
@@ -38,7 +41,9 @@
 						</ColumnListItem>
 					</Table>
 				</content>
-			</Page>
+			</Page>	
+			<!--dit is de footer-->
+	<mvc:XMLView viewName="ResearcherApp.RecycleFrontEndResearcherApp.view.Footer"/>
 		</pages>
 	</App>
 </mvc:View>

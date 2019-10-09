@@ -11,19 +11,14 @@ sap.ui.define([
 		 * @memberOf ResearcherApp.RecycleFrontEndResearcherApp.view.DetailPage-Sensor
 		 */
 		onInit: function () {
+		//Er wordt hier de data van het andere model in de tabel gezet om te kunnen laten zien in de view
 		var oModel3 = this.getOwnerComponent().getModel("modeltest");
-		// var oModel3 = this.getOwnerComponent().getModel("modeltest");
 		var oTable4 = this.getView().byId("specificItem");
-		//var data = JSON.parse(oModel3.getJSON().TestData);
-		//sap.ui.getCore().byId("t1").setText(data.toString());
-		//console.log(data);
 		oTable4.setModel(oModel3);
+		
+		//Er wordt hier de data van het andere model in de tabel gezet om te kunnen laten zien in de view
 		var oModel4 = this.getOwnerComponent().getModel("modeltest");
-		// var oModel3 = this.getOwnerComponent().getModel("modeltest");
 		var oTable5 = this.getView().byId("specificItemDetail");
-		//var data = JSON.parse(oModel3.getJSON().TestData);
-		//sap.ui.getCore().byId("t1").setText(data.toString());
-		//console.log(data);
 		oTable5.setModel(oModel4);
 		
 		}
