@@ -1,62 +1,56 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
 	controllerName="ResearcherApp.RecycleFrontEndResearcherApp.controller.DetailPage-Item" xmlns:html="http://www.w3.org/1999/xhtml">
-	<App>
-		<pages>
-			<Page title="Title">
-				<content><Label text="data:"></Label>
-					<!--dit is de tabel waar alle sensor data dat op de wireframes nodig is wordt in geplaatst (zonder locatie)-->
-				<Table id="specificItem" items="{path: '/Item'}" visible="hidden">
-						<columns>
-							<Column>
-								<Label text="Correlation Asset Id"></Label>
-							</Column>
-							<Column>
-								<Label text="Active"></Label>
-							</Column>
-							<Column>
-								<Label text="Type Name"></Label>
-							</Column>
-							<Column>
-								<Label text="Status"></Label>
-							</Column>
-							<Column>
-								<Label text="Fist time entered in the water"></Label>
-							</Column>
-							<Column>
-								<Label text="Physical ID"></Label>
-							</Column>
-						</columns>
-						<ColumnListItem type="Active">
-							<Text text="{correlationAssetId}"></Text>
-							<Text text="{active}"></Text>
-							<Text text="{type/Type_name}"></Text>
-							<Text text="{status}"></Text>
-							<Text text="{FirstWaterEntered}"></Text>
-							<Text text="{type/physicalId}"></Text>
-							
-						</ColumnListItem>
-					</Table>
-					<!--dit is de tabel waar alle items(geen sensors) locaties dat op de wireframes nodig is wordt in geplaatst (in principe maar dit gaat elke keer wel maar een geven omdat. deze wordt opgelost van zodra de ajax calls hierbij worden gebruikt)-->
-						
-					<Table id="specificItemDetail" items="{path: '/Item'}">
-					<columns>
+	<Page title="Title" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<Label text="data:"></Label>
+			<!--dit is de tabel waar alle sensor data dat op de wireframes nodig is wordt in geplaatst (zonder locatie)-->
+			<Table id="specificItem" items="{path: '/Item'}" visible="hidden">
+				<columns>
 					<Column>
-								<Label text="Location"></Label>
-							</Column>
-							<Column>
-								<Label text="Time"></Label>
-							</Column>
-							
-					</columns>
-						<ColumnListItem type="Active">
-								<Text text="{locations/0/latitude} °N {locations/0/longitude} °E"></Text>
-							<Text text="{locations/0/timestamp}"></Text>
-						</ColumnListItem>
-						</Table>
-						</content>
-			</Page>	
-			<!--dit is de footer-->
+						<Label text="Correlation Asset Id"></Label>
+					</Column>
+					<Column>
+						<Label text="Active"></Label>
+					</Column>
+					<Column>
+						<Label text="Type Name"></Label>
+					</Column>
+					<Column>
+						<Label text="Status"></Label>
+					</Column>
+					<Column>
+						<Label text="Fist time entered in the water"></Label>
+					</Column>
+					<Column>
+						<Label text="Physical ID"></Label>
+					</Column>
+				</columns>
+				<ColumnListItem type="Active">
+					<Text text="{correlationAssetId}"></Text>
+					<Text text="{active}"></Text>
+					<Text text="{type/Type_name}"></Text>
+					<Text text="{status}"></Text>
+					<Text text="{FirstWaterEntered}"></Text>
+					<Text text="{type/physicalId}"></Text>
+				</ColumnListItem>
+			</Table>
+			<!--dit is de tabel waar alle items(geen sensors) locaties dat op de wireframes nodig is wordt in geplaatst (in principe maar dit gaat elke keer wel maar een geven omdat. deze wordt opgelost van zodra de ajax calls hierbij worden gebruikt)-->
+			<Table id="specificItemDetail" items="{path: '/Item'}">
+				<columns>
+					<Column>
+						<Label text="Location"></Label>
+					</Column>
+					<Column>
+						<Label text="Time"></Label>
+					</Column>
+				</columns>
+				<ColumnListItem type="Active">
+					<Text text="{locations/0/latitude} °N {locations/0/longitude} °E"></Text>
+					<Text text="{locations/0/timestamp}"></Text>
+				</ColumnListItem>
+			</Table>
+		</content>
+	</Page>
+	<!--dit is de footer-->
 	<mvc:XMLView viewName="ResearcherApp.RecycleFrontEndResearcherApp.view.Footer"/>
-		</pages>
-	</App>
 </mvc:View>

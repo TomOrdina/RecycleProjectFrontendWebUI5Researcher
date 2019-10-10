@@ -1,7 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/ui/core/UIComponent"
-], function (Controller, UIComponent) {
+	"sap/ui/core/UIComponent",
+	"sap/ui/core/routing/History"
+], function (Controller, UIComponent, History) {
 	"use strict";
 
 	return Controller.extend("ResearcherApp.RecycleFrontEndResearcherApp.controller.Overview", {
@@ -137,7 +138,6 @@ sap.ui.define([
 			sap.ui.getCore().setModel(oModel2);
 			var oRouter = UIComponent.getRouterFor(this);
 			oRouter.navTo("RouteDetailSensor");
-
 		},
 			
 		// userEventPress: function (event) {
@@ -205,6 +205,8 @@ sap.ui.define([
 		// 	oRouter.navTo("RouteSecond");
 		// },
 		onAfterRendering: function () {
+			var that = this;
+			
 			//get model from data.json file
 			var oModel = this.getView().getModel("data");
 			//var localModel = JSON.parse(oModel.getJSON());
@@ -215,6 +217,13 @@ sap.ui.define([
 			var datum = "teststring";
 			var text = new sap.m.Text("test");
 			text.setText(datum);
+			
+			// var test = sap.ui.getCore().getElementById("scrollBarOverview");
+			// var test2 = that.getView().byId("scrollBarOverview").getDomRef();
+			// var test3 = that.getView().byId("scrollBarOverview"); //.getDomRef();
+			
+			// test2.classList.add("noScrollBarWebkit");
+			// test2.className += "noScrollBarWebkit";
 		}
 	});
 });
