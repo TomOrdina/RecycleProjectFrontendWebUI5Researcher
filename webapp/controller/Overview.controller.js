@@ -212,9 +212,9 @@ sap.ui.define([
 			this.getView().setModel(oModel);
 			//var loModel = JSON.parse(oModel);
 			//console.log(loModel);
-			var datum = "teststring";
-			var text = new sap.m.Text("test");
-			text.setText(datum);
+			// var datum = "teststring";
+			// var text = new sap.m.Text("test");
+			// text.setText(datum);
 		}
 	});
 });
