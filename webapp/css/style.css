@@ -92,3 +92,14 @@
 
 .content {
 }
+
+/*Hide scrollbar without disabling the function, should work on Chrome, Safari and Android browsers*/
+div.noScrollBarWebkit::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+}
+
+/*Hide scrollbar without disabling the function, should work on IE*/
+.noScrollBarIE {
+    -ms-overflow-style: none;
+}

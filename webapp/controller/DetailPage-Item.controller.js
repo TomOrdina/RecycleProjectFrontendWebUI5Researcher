@@ -1,6 +1,7 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/ui/core/routing/History"
+], function (Controller, History) {
 	"use strict";
 
 	return Controller.extend("ResearcherApp.RecycleFrontEndResearcherApp.controller.DetailPage-Item", {
@@ -11,20 +12,27 @@ sap.ui.define([
 		 * @memberOf ResearcherApp.RecycleFrontEndResearcherApp.view.DetailPage-Item
 		 */
 		onInit: function () {
-		var oModel3 = this.getOwnerComponent().getModel("modeltest");
-		// var oModel3 = this.getOwnerComponent().getModel("modeltest");
-		var oTable4 = this.getView().byId("specificItem");
-		//var data = JSON.parse(oModel3.getJSON().TestData);
-		//sap.ui.getCore().byId("t1").setText(data.toString());
-		//console.log(data);
-		oTable4.setModel(oModel3);
-		var oModel4 = this.getOwnerComponent().getModel("modeltest");
-		// var oModel3 = this.getOwnerComponent().getModel("modeltest");
-		var oTable5 = this.getView().byId("specificItemDetail");
-		//var data = JSON.parse(oModel3.getJSON().TestData);
-		//sap.ui.getCore().byId("t1").setText(data.toString());
-		//console.log(data);
-		oTable5.setModel(oModel4);
+			//Er wordt hier de data van het andere model in de tabel gezet om te kunnen laten zien in de view
+			var oModel3 = this.getOwnerComponent().getModel("modeltest");
+			var oTable4 = this.getView().byId("specificItem");
+			oTable4.setModel(oModel3);
+			
+			//Er wordt hier de data van het andere model in de tabel gezet om te kunnen laten zien in de view
+			var oModel4 = this.getOwnerComponent().getModel("modeltest");
+			var oTable5 = this.getView().byId("specificItemDetail");
+			oTable5.setModel(oModel4);
+		},
+		
+		onNavBack: function () {
+			var oHistory = History.getInstance();
+			var sPreviousHash = oHistory.getPreviousHash();
+
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+				oRouter.navTo("RouteOverview", true);
+			}
 		}
 
 		/**

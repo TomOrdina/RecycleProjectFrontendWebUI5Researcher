@@ -192,6 +192,60 @@
 			"timestamp": "2019-10-11T01:59:00Z"
 		}],
 		"FirstWaterEntered": "2019-02-15T10:30:00Z"
+	},{
+		"correlationAssetId": "ded5833c-947c-48a3-920f-88a8c6743a29",
+		"active": true,
+		"type": {
+			"Type_name": "sensor",
+			"ColorCode": "new",
+			"batteryLevel": 15,
+			"wakeUpTime": 15000,
+			"hibernate": false
+		},
+		"status": "UNCONNECTED",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 1.23,
+			"longitude": 4.57,
+			"timestamp": "2019-10-11T01:59:00Z"
+		}],
+		"FirstWaterEntered": "2019-02-15T10:30:00Z"
+	},{
+		"correlationAssetId": "ded5833c-947c-48a3-920f-88a8c6743a29",
+		"active": true,
+		"type": {
+			"Type_name": "sensor",
+			"ColorCode": "new",
+			"batteryLevel": 15,
+			"wakeUpTime": 15000,
+			"hibernate": false
+		},
+		"status": "UNCONNECTED",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 1.23,
+			"longitude": 4.57,
+			"timestamp": "2019-10-11T01:59:00Z"
+		}],
+		"FirstWaterEntered": "2019-02-15T10:30:00Z"
+	},{
+		"correlationAssetId": "ded5833c-947c-48a3-920f-88a8c6743a29",
+		"active": true,
+		"type": {
+			"Type_name": "sensor",
+			"ColorCode": "new",
+			"batteryLevel": 15,
+			"wakeUpTime": 15000,
+			"hibernate": false
+		},
+		"status": "LAATSTE",
+		"locations": [{
+			"id": "ef979d1c-3547-442f-aafc-daf04d5a5b47",
+			"latitude": 1.23,
+			"longitude": 4.57,
+			"timestamp": "2019-10-11T01:59:00Z"
+		}],
+		"FirstWaterEntered": "2019-02-15T10:30:00Z"
 	}],
 	"User": [{
 		"UID": 1543413246153223124,

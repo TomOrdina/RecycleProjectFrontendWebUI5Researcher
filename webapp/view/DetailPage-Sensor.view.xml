@@ -1,44 +1,44 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
 	controllerName="ResearcherApp.RecycleFrontEndResearcherApp.controller.DetailPage-Sensor" xmlns:html="http://www.w3.org/1999/xhtml">
-	<App>
-		<pages>
-			<Page title="Title">
-				<content>
-					<Label text="data:"></Label>
-					<Table id="specificItem" items="{path: '/Item'}" visible="hidden">
-						<columns>
-							<Column>
-								<Label text="Battery Level"></Label>
-							</Column>
-							<Column>
-								<Label text="Wake up time"></Label>
-							</Column>
-							<Column>
-								<Label text="Hibernate"></Label>
-							</Column>
-						</columns>
-						<ColumnListItem type="Active">
-							<Text text="{type/batteryLevel}"></Text>
-							<Text text="{type/wakeUpTime}"></Text>
-							<Text text="{type/hibernate}"></Text>
-						</ColumnListItem>
-					</Table>
-					<Table id="specificItemDetail" items="{path: '/Item'}">
-						<columns>
-							<Column>
-								<Label text="Location"></Label>
-							</Column>
-							<Column>
-								<Label text="Time"></Label>
-							</Column>
-						</columns>
-						<ColumnListItem type="Active">
-							<Text text="{locations/0/latitude} °N {locations/0/longitude} °E"></Text>
-							<Text text="{locations/0/timestamp}"></Text>
-						</ColumnListItem>
-					</Table>
-				</content>
-			</Page>
-		</pages>
-	</App>
+	<Page title="Title" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<!--dit is de tabel waar alle sensor data dat op de wireframes nodig is wordt in geplaatst (zonder locatie)-->
+			<Label text="data:"></Label>
+			<Table id="specificItem" items="{path: '/Item'}" visible="hidden">
+				<columns>
+					<Column>
+						<Label text="Battery Level"></Label>
+					</Column>
+					<Column>
+						<Label text="Wake up time"></Label>
+					</Column>
+					<Column>
+						<Label text="Hibernate"></Label>
+					</Column>
+				</columns>
+				<ColumnListItem type="Active">
+					<Text text="{type/batteryLevel}"></Text>
+					<Text text="{type/wakeUpTime}"></Text>
+					<Text text="{type/hibernate}"></Text>
+				</ColumnListItem>
+			</Table>
+			<!--dit is de tabel waar alle sensor locaties dat op de wireframes nodig is wordt in geplaatst (in principe maar dit gaat elke keer wel maar een geven omdat. deze wordt opgelost van zodra de ajax calls hierbij worden gebruikt)-->
+			<Table id="specificItemDetail" items="{path: '/Item'}">
+				<columns>
+					<Column>
+						<Label text="Location"></Label>
+					</Column>
+					<Column>
+						<Label text="Time"></Label>
+					</Column>
+				</columns>
+				<ColumnListItem type="Active">
+					<Text text="{locations/0/latitude} °N {locations/0/longitude} °E"></Text>
+					<Text text="{locations/0/timestamp}"></Text>
+				</ColumnListItem>
+			</Table>
+		</content>
+	</Page>
+	<!--dit is de footer-->
+	<mvc:XMLView viewName="ResearcherApp.RecycleFrontEndResearcherApp.view.Footer"/>
 </mvc:View>
