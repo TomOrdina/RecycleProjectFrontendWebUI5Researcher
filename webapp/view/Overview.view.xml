@@ -1,12 +1,17 @@
 <mvc:View controllerName="ResearcherApp.RecycleFrontEndResearcherApp.controller.Overview" xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core">
-	<Page id="floatingFooterPage" showHeader="false" floatingFooter="false">
-		<ScrollContainer id="scrollBarOverview" height="87.2vh" width="100%" vertical="true" focusable="false"
+	<Page title="Overview" id="floatingFooterPage" floatingFooter="false">
+		<subHeader>
+			<Toolbar>
+				<SearchField search="onSearch" width="100%" />
+			</Toolbar>
+		</subHeader>
+		<ScrollContainer id="scrollBarOverview" height="67vh" width="100%" vertical="true" focusable="false"
 		class="noScrollBarWebkit noScrollBarIE">
 			<VBox alignContent="Start" justifyContent="Center" alignItems="Center">
 				<items>
 					<!--dit is de tabel waar alle data in wordt geplaatst-->
-					<Table id="testtabel" items="{path: '/Item'}" itemPress="generalData" sticky="ColumnHeaders">
+					<Table id="overviewTable" items="{path: '/'}" itemPress="onItemPress" sticky="ColumnHeaders">
 						<columns>
 							<Column>
 								<Label text="Time"></Label>
@@ -17,52 +22,40 @@
 							<Column>
 								<Label text="status"></Label>
 							</Column>
-							<Column visible="hidden">
-								<Label text="active"></Label>
-							</Column>
-							<Column visible="hidden">
-								<Label text="Type name"></Label>
-							</Column>
-							<Column visible="hidden">
-								<Label text="FirstWaterEntered"></Label>
-							</Column>
-							<Column visible="hidden">
-								<Label text="longitude"></Label>
-							</Column>
-							<Column visible="hidden">
-								<Label text="latitude"></Label>
-							</Column>
-							<Column visible="hidden">
-								<Label text="battery level"></Label>
-							</Column>
-							<Column visible="hidden">
-								<Label text="wakeuptime"></Label>
-							</Column>
-							<Column visible="hidden">
-								<Label text="hibernate"></Label>
-							</Column>
-							<Column visible="hidden">
-								<Label text="physicalID"></Label>
-							</Column>
+							<!--<Column visible="hidden">-->
+							<!--	<Label text="active"></Label>-->
+							<!--</Column>-->
 						</columns>
 						<ColumnListItem type="Active">
-							<Text text="{locations/0/timestamp}"></Text>
-							<Text text="{correlationAssetId}"></Text>
-							<Text text="{status}"></Text>
+							<Text text="{id}"></Text>
+							<Text text="{physicalId}"></Text>
+							<Text text="{type}"></Text>
 							<Text text="{active}"></Text>
-							<Text text="{type/Type_name}"></Text>
-							<Text text="{FirstWaterEntered}"></Text>
-							<Text text="{locations/0/longitude}"></Text>
-							<Text text="{locations/0/latitude}"></Text>
-							<Text text="{type/batteryLevel}"></Text>
-							<Text text="{type/wakeUpTime}"></Text>
-							<Text text="{type/hibernate}"></Text>
-							<Text text="{type/physicalId}"></Text>
+							
+							<!--<Text text="{locations/0/timestamp}"></Text>-->
+							<!--<Text text="{correlationAssetId}"></Text>-->
+							<!--<Text text="{status}"></Text>-->
+							<!--<Text text="{active}"></Text>-->
+							<!--<Text text="{type/Type_name}"></Text>-->
+							<!--<Text text="{FirstWaterEntered}"></Text>-->
+							<!--<Text text="{locations/0/longitude}"></Text>-->
+							<!--<Text text="{locations/0/latitude}"></Text>-->
+							<!--<Text text="{type/batteryLevel}"></Text>-->
+							<!--<Text text="{type/wakeUpTime}"></Text>-->
+							<!--<Text text="{type/hibernate}"></Text>-->
+							<!--<Text text="{type/physicalId}"></Text>-->
 						</ColumnListItem>
 					</Table>
 				</items>
 			</VBox>
 		</ScrollContainer>
+		<FlexBox justifyContent="Center" alignContent="Center" >
+			<HBox width="91vw" alignItems="Center" justifyContent="SpaceBetween">
+				<Button id="previousButton" press="onPrevious" icon="sap-icon://arrow-left/" />
+				<Text id="paginationInfo" text=""></Text>
+				<Button id="nextButton" press="onNext" icon="sap-icon://arrow-right/" />
+			</HBox>
+		</FlexBox>
 	</Page>
 	<mvc:XMLView viewName="ResearcherApp.RecycleFrontEndResearcherApp.view.Footer"/>
 </mvc:View>
