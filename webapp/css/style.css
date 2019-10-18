@@ -5,6 +5,9 @@
 .header {
 	font-size:6vw;
 }
+.bold {
+	font-weight: bold;
+}
 .underline {
 	text-decoration: underline;
 }

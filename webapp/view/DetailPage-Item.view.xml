@@ -1,56 +1,31 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
 	controllerName="ResearcherApp.RecycleFrontEndResearcherApp.controller.DetailPage-Item" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="Title" showNavButton="true" navButtonPress="onNavBack">
+	<Page id="pageTitle" title="Title" showNavButton="true" navButtonPress="onNavBack">
 		<content>
-			<Label text="data:"></Label>
-			<!--dit is de tabel waar alle sensor data dat op de wireframes nodig is wordt in geplaatst (zonder locatie)-->
-			<Table id="specificItem" items="{path: '/Item'}" visible="hidden">
-				<columns>
-					<Column>
-						<Label text="Correlation Asset Id"></Label>
-					</Column>
-					<Column>
-						<Label text="Active"></Label>
-					</Column>
-					<Column>
-						<Label text="Type Name"></Label>
-					</Column>
-					<Column>
-						<Label text="Status"></Label>
-					</Column>
-					<Column>
-						<Label text="Fist time entered in the water"></Label>
-					</Column>
-					<Column>
-						<Label text="Physical ID"></Label>
-					</Column>
-				</columns>
-				<ColumnListItem type="Active">
-					<Text text="{correlationAssetId}"></Text>
-					<Text text="{active}"></Text>
-					<Text text="{type/Type_name}"></Text>
-					<Text text="{status}"></Text>
-					<Text text="{FirstWaterEntered}"></Text>
-					<Text text="{type/physicalId}"></Text>
-				</ColumnListItem>
-			</Table>
-			<!--dit is de tabel waar alle items(geen sensors) locaties dat op de wireframes nodig is wordt in geplaatst (in principe maar dit gaat elke keer wel maar een geven omdat. deze wordt opgelost van zodra de ajax calls hierbij worden gebruikt)-->
-			<Table id="specificItemDetail" items="{path: '/Item'}">
-				<columns>
-					<Column>
-						<Label text="Location"></Label>
-					</Column>
-					<Column>
-						<Label text="Time"></Label>
-					</Column>
-				</columns>
-				<ColumnListItem type="Active">
-					<Text text="{locations/0/latitude} °N {locations/0/longitude} °E"></Text>
-					<Text text="{locations/0/timestamp}"></Text>
-				</ColumnListItem>
-			</Table>
+			<Label id="labelTitle" class="sapUiSmallMargin"/>
+			<ScrollContainer id="scrollBarOverview" height="60vh" width="100%" vertical="true" focusable="false"
+				class="noScrollBarWebkit noScrollBarIE">
+				<VBox alignContent="Start" justifyContent="Center" alignItems="Center">
+					<items>
+						<Table id="itemTable" items="{path: '/'}" sticky="ColumnHeaders">
+							<columns>
+								<Column>
+									<Label design="Bold" text="Location" class="bold"></Label>
+								</Column>
+								<Column>
+									<Label design="Bold" text="Time" class="bold"></Label>
+								</Column>
+							</columns>
+							<ColumnListItem type="Active">
+								<Text text="{dms}"></Text>
+								<Text text="{timestamp}"></Text>
+							</ColumnListItem>
+						</Table>
+					</items>
+					<Button width="80vw" text="{i18n>showOnMap}" type="Emphasized" press="onShowOnMap" class="sapUiContentPadding"></Button>
+				</VBox>
+			</ScrollContainer>
 		</content>
 	</Page>
-	<!--dit is de footer-->
 	<mvc:XMLView viewName="ResearcherApp.RecycleFrontEndResearcherApp.view.Footer"/>
 </mvc:View>

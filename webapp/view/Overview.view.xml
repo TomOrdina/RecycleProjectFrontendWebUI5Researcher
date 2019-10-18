@@ -22,34 +22,17 @@
 							<Column>
 								<Label text="status"></Label>
 							</Column>
-							<!--<Column visible="hidden">-->
-							<!--	<Label text="active"></Label>-->
-							<!--</Column>-->
 						</columns>
 						<ColumnListItem type="Active">
 							<Text text="{id}"></Text>
 							<Text text="{physicalId}"></Text>
 							<Text text="{type}"></Text>
-							<Text text="{active}"></Text>
-							
-							<!--<Text text="{locations/0/timestamp}"></Text>-->
-							<!--<Text text="{correlationAssetId}"></Text>-->
-							<!--<Text text="{status}"></Text>-->
-							<!--<Text text="{active}"></Text>-->
-							<!--<Text text="{type/Type_name}"></Text>-->
-							<!--<Text text="{FirstWaterEntered}"></Text>-->
-							<!--<Text text="{locations/0/longitude}"></Text>-->
-							<!--<Text text="{locations/0/latitude}"></Text>-->
-							<!--<Text text="{type/batteryLevel}"></Text>-->
-							<!--<Text text="{type/wakeUpTime}"></Text>-->
-							<!--<Text text="{type/hibernate}"></Text>-->
-							<!--<Text text="{type/physicalId}"></Text>-->
 						</ColumnListItem>
 					</Table>
 				</items>
 			</VBox>
 		</ScrollContainer>
-		<FlexBox justifyContent="Center" alignContent="Center" >
+		<FlexBox justifyContent="Center" alignContent="Center">
 			<HBox width="91vw" alignItems="Center" justifyContent="SpaceBetween">
 				<Button id="previousButton" press="onPrevious" icon="sap-icon://arrow-left/" />
 				<Text id="paginationInfo" text=""></Text>
